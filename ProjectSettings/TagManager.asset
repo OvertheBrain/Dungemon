@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Attack
+  - Wall
+  - Enemy
+  - LightBall
+  - Boss
+  - Food
+  - CoolGem
+  - Exp
+  - Bomb
+  - Dragon
+  - FireBall
+  - Blast
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Room
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 4063983891
+    locked: 0
+  - name: Door
+    uniqueID: 1643578813
+    locked: 0
+  - name: Player
+    uniqueID: 1271109927
+    locked: 0
