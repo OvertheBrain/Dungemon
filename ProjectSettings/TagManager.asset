@@ -16,6 +16,7 @@ TagManager:
   - Dragon
   - FireBall
   - Blast
+  - Friend
   layers:
   - Default
   - TransparentFX

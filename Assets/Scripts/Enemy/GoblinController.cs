@@ -179,6 +179,18 @@ public class GoblinController : MonoBehaviour
                 int prop = Random.Range(0, 20);
                 if (prop <= 15)
                     GenerateItem();
+                GameObject Dungemon = GameObject.FindGameObjectWithTag("Friend");
+                GameObject Player = GameObject.FindGameObjectWithTag("Player");
+                if ((Player.transform.position - Dungemon.transform.position).magnitude <= 5)
+                { 
+                    Dungemon.GetComponent<DungemonController>().Exp += 150;
+                    Dungemon.GetComponent<DungemonController>().score += 750;
+                }
+                else
+                { 
+                    Dungemon.GetComponent<DungemonController>().Exp += 100;
+                    Dungemon.GetComponent<DungemonController>().score += 500;
+                }
                 yield return new WaitForSeconds(1.5f);
                 Destroy(this.gameObject);
             }

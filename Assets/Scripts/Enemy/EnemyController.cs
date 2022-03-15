@@ -182,6 +182,18 @@ public class EnemyController : MonoBehaviour
             int prop = Random.Range(0, 20);
             if (prop <= 9)
                 GenerateItem();
+            GameObject Dungemon = GameObject.FindGameObjectWithTag("Friend");
+            GameObject Player = GameObject.FindGameObjectWithTag("Player");
+            if ((Player.transform.position - Dungemon.transform.position).magnitude <= 5)
+            {
+                Dungemon.GetComponent<DungemonController>().Exp += 45;
+                Dungemon.GetComponent<DungemonController>().score += 75;
+            }
+            else
+            {
+                Dungemon.GetComponent<DungemonController>().Exp += 30;
+                Dungemon.GetComponent<DungemonController>().score += 50;
+            }
             Destroy(this.gameObject);
         }
     }

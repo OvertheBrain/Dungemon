@@ -208,13 +208,13 @@ public class PlayerController : MonoBehaviour
         {
             if (CurrentCooldown >= cooldown)
             {
-                if (Input.GetKeyDown(KeyCode.Alpha4) && isSkill)
+                if (Input.GetKeyDown(KeyCode.K) && isSkill)
                 {
                     isSkill = false;
                     anim.SetBool("isKickBoard", false);
                     CurrentCooldown = 0;
                 }
-                else if (Input.GetKeyDown(KeyCode.Alpha4) && !isSkill)
+                else if (Input.GetKeyDown(KeyCode.K) && !isSkill)
                 {
                     isSkill = true;
                     anim.SetBool("isKickBoard", true);                   
@@ -223,7 +223,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Alpha4) && !isSkill)
+            if (Input.GetKeyDown(KeyCode.K) && !isSkill)
             {
                 if (CurrentCooldown >= cooldown)
                 {
@@ -288,7 +288,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("isAttack", false);
                 currentPeriod = 0;
             }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.J))
         {
             anim.SetBool("isAttack", true);
             anim.SetTrigger("attack");                     

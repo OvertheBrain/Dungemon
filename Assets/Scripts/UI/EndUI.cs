@@ -15,7 +15,8 @@ public class EndUI : MonoBehaviour
             Info.text = "You win.";
         else
             Info.text = "You die.";
-        Score.text = $"Score: {GameManager.instance.score.ToString()}";
+        int score = GameManager.instance.score + GameManager.instance.dun.score + GameManager.instance.dun.level * 500;
+        Score.text = $"Score: {score.ToString()}";
     }
 
     // Update is called once per frame
