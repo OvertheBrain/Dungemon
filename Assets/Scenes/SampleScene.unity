@@ -199,6 +199,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &416423179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4822779248709247277, guid: 58a02d10f5906fe4db69811ffdfca261,
+    type: 3}
+  m_PrefabInstance: {fileID: 559309823272009350}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +303,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742242048 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7963516791581578119, guid: 58a02d10f5906fe4db69811ffdfca261,
+    type: 3}
+  m_PrefabInstance: {fileID: 559309823272009350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &786852447 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2347915378788469134, guid: 58a02d10f5906fe4db69811ffdfca261,
@@ -700,10 +718,12 @@ MonoBehaviour:
   StartUI: {fileID: 1680725071}
   PlayerUI: {fileID: 1815469160}
   EndUI: {fileID: 951568457}
+  DungemonUI: {fileID: 416423179}
   Player_BOY: {fileID: 4680881725659314426, guid: 333db1c68bffad14aad5380ca1da84c7,
     type: 3}
   Player_GIRL: {fileID: 2749081765513628084, guid: a9734001b86e69a4cb602cea8c268854,
     type: 3}
+  Friend: {fileID: 2167806855566627469, guid: d2ded0c67ecfeda4eac81baa0c422b9d, type: 3}
   status: 0
 --- !u!4 &1717079026
 Transform:
@@ -786,6 +806,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 438079179658456268, guid: 58a02d10f5906fe4db69811ffdfca261,
+        type: 3}
+      propertyPath: Status
+      value: 
+      objectReference: {fileID: 742242048}
     - target: {fileID: 559309823744568009, guid: 58a02d10f5906fe4db69811ffdfca261,
         type: 3}
       propertyPath: m_Name
