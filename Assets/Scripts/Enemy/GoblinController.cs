@@ -188,8 +188,8 @@ public class GoblinController : MonoBehaviour
                 }
                 else
                 { 
-                    Dungemon.GetComponent<DungemonController>().Exp += 100;
-                    Dungemon.GetComponent<DungemonController>().score += 500;
+                    Dungemon.GetComponent<DungemonController>().Exp += 80;
+                    Dungemon.GetComponent<DungemonController>().score += 400;
                 }
                 yield return new WaitForSeconds(1.5f);
                 Destroy(this.gameObject);
@@ -206,10 +206,10 @@ public class GoblinController : MonoBehaviour
             Hurt();
             life--;
         }
-        if (other.CompareTag("Bomb"))
+        if (other.CompareTag("Explosion"))
         {
             Hurt();
-            life -= 2;
+            life -= 4;
         }
 
     }

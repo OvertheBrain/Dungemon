@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator anim;
-    public AudioSource pickup, cool, beat;
+    public AudioSource pickup, cool, beat, hurt;
     Vector2 movement;
     public int direction = 1;
     private bool isSkill = false;
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     private float period = 0.8f, currentPeriod;
 
     private float currentGem, GemTime = 3.5f;
-    private int bombnum = 0;
+    public int bombnum = 0;
     public GameObject bomb;
 
     private bool Burned = false;
@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.life = life;       
         GameManager.instance.CurrentCooldown = CurrentCooldown;
         currentHurt += Time.deltaTime;
+        GameManager.instance.BombNum = bombnum;
         if (Burned) GameManager.instance.status = GameManager.states.Burn;
         CoolGem();
         Burning();
@@ -88,6 +89,7 @@ public class PlayerController : MonoBehaviour
                 isSkill = false;
                 anim.SetBool("isKickBoard", false);
                 CurrentCooldown = 0;
+                currentHurt = 0; 
             }
             else
                 Hurt();
@@ -103,6 +105,7 @@ public class PlayerController : MonoBehaviour
                 isSkill = false;
                 anim.SetBool("isKickBoard", false);
                 CurrentCooldown = 0;
+                currentHurt = 0;
             }
             if (other.gameObject.GetComponent<GoblinController>().anim.GetBool("isAttack"))
             {
@@ -125,6 +128,7 @@ public class PlayerController : MonoBehaviour
                 isSkill = false;
                 anim.SetBool("isKickBoard", false);
                 CurrentCooldown = 0;
+                currentHurt = 0;
             }
             else
                 Hurt();
@@ -148,6 +152,7 @@ public class PlayerController : MonoBehaviour
             cool.Play();
             Destroy(other.gameObject);
             currentGem = 0;
+            GemTime = (GameManager.instance.gender == 0) ? 5 : 3;
             GameManager.instance.status = GameManager.states.Cool;
         }
         if (other.CompareTag("Bomb"))
@@ -300,6 +305,8 @@ public class PlayerController : MonoBehaviour
         if (currentHurt >= hurtTime)
         {
             anim.SetTrigger("hurt");
+            if (!isCollide)
+                hurt.Play();
             if (direction == 1)
                 rb.AddForce(new Vector2(-5f, 1f), ForceMode2D.Impulse);
             else

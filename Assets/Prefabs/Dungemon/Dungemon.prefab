@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1271109927
+  m_SortingLayerID: -120829655
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 72de0c64f2c6a498096698322c976a67, type: 3}
@@ -162,10 +162,10 @@ MonoBehaviour:
   ATK: 2
   score: 1000
   direction: 1
-  CurrentCooldown1: 3
+  CurrentCooldown1: 16
   CurrentCooldown2: 3
-  CurrentCooldown3: 3
-  cooldown1: 3
+  CurrentCooldown3: 6
+  cooldown1: 15
   cooldown2: 2.5
   cooldown3: 5
   dead: 16

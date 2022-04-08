@@ -91,12 +91,16 @@ public class DungemonController : MonoBehaviour
     }
 
     private void Grow()
-    {
-        level = (int)(0.0125 * Exp + 1);
-        if (Exp >= 1600) Exp = 1599;
-        if (level > 20) level = 20;
-        ATK = level / 5 + 2;
-        speed = 5 + level / 4;
+    {       
+        if (Exp < 1600)
+            level = (int)(0.0125 * Exp + 1);
+        else
+            level = 20 + (int)(0.0125 * (Exp - 1600) / 1.5);
+
+        if (level > 30) level = 30;
+
+        ATK = level / 7 + 2;
+        speed = 4 + level / 5;
         maxlife = 15 + level;
     }
 
@@ -153,7 +157,7 @@ public class DungemonController : MonoBehaviour
         }
         if (other.CompareTag("Exp"))
         {
-            Exp += 15;
+            Exp += 25;
             Destroy(other.gameObject);
         }
         if (other.CompareTag("FireBall"))
@@ -231,7 +235,10 @@ public class DungemonController : MonoBehaviour
                     anim.SetTrigger("skill");
                     isSkill = false;
                     CurrentCooldown1 = 0;
-                }
+                    transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
+                    if (life >= maxlife) return;
+                    life ++;
+            }
 
             }
         if (Input.GetKeyDown(KeyCode.Alpha2) && !isSkill)

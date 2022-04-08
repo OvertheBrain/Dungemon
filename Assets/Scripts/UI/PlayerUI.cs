@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerUI : MonoBehaviour
 {
     public Text PlayerName;
-    public Text Life, Score, Status;
+    public Text Life, Score, Status, Bomb;
     public Image PlayerIcon, Skill, SkillMask;
     public Sprite Male, Female, KickBoard, Lightball;
 
@@ -23,6 +23,7 @@ public class PlayerUI : MonoBehaviour
         SkillMask.fillAmount = 1 - GameManager.instance.CurrentCooldown / GameManager.instance.coolDown;
         Score.text = $"Score: {GameManager.instance.score.ToString()}";
         Status.text = $"{GameManager.instance.status.ToString()}";
+        Bomb.text = $"X{GameManager.instance.BombNum.ToString()}";
     }
 
     private void Initialize()

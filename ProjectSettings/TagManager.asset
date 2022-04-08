@@ -4,19 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Attack
   - Wall
-  - Enemy
-  - LightBall
-  - Boss
-  - Food
-  - CoolGem
-  - Exp
-  - Bomb
-  - Dragon
   - FireBall
-  - Blast
+  - Exp
+  - Boss
+  - LightBall
+  - CoolGem
   - Friend
+  - Attack
+  - Blast
+  - Bomb
+  - Food
+  - Enemy
+  - Dragon
+  - Explosion
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - UI
   - 
   - 
-  - Room
+  - 
   - 
   - 
   - 
@@ -55,11 +56,11 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Ground
-    uniqueID: 4063983891
+    uniqueID: 1013484817
     locked: 0
   - name: Door
-    uniqueID: 1643578813
+    uniqueID: 1003497163
     locked: 0
   - name: Player
-    uniqueID: 1271109927
+    uniqueID: 4174137641
     locked: 0

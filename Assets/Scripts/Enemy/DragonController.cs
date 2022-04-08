@@ -102,7 +102,7 @@ public class DragonController : MonoBehaviour
             Destroy(other.gameObject);
             Hurt();
         }
-        if (other.CompareTag("Bomb"))
+        if (other.CompareTag("Explosion"))
         {
             if (other.gameObject.GetComponent<Bomb>().ignite)
             {

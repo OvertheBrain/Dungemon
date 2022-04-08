@@ -38,8 +38,9 @@ public class Bomb : MonoBehaviour
         yield return new WaitForSeconds(duration);
         GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 1);
         boom.Play();
+        this.gameObject.tag = "Explosion";
         anim.SetTrigger("Explosion");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.9f);
         Destroy(gameObject);
     }
 

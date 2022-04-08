@@ -156,7 +156,7 @@ public class EnemyController : MonoBehaviour
             Hurt();
             life--;
         }
-        if (other.CompareTag("Bomb"))
+        if (other.CompareTag("Explosion"))
         {
             life -= 3;
         }
@@ -191,8 +191,8 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
-                Dungemon.GetComponent<DungemonController>().Exp += 30;
-                Dungemon.GetComponent<DungemonController>().score += 50;
+                Dungemon.GetComponent<DungemonController>().Exp += 20;
+                Dungemon.GetComponent<DungemonController>().score += 40;
             }
             Destroy(this.gameObject);
         }

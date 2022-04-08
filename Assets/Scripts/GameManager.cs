@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public int life;
     public float CurrentCooldown, coolDown;
+    public int BombNum = 0;
 
     public GameObject StartUI, PlayerUI, EndUI, DungemonUI;
     public GameObject Player_BOY, Player_GIRL, Friend;

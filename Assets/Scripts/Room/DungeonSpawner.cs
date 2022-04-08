@@ -134,12 +134,12 @@ public class DungeonSpawner : MonoBehaviour
                 Vector3 spawnPosition = transform.position;
                 spawnPosition.y = Random.Range(spawnPosition.y - 4f, spawnPosition.y + 4f);
                 spawnPosition.x = Random.Range(spawnPosition.x - 7f, spawnPosition.x + 7f);
-                int prop = Random.Range(0, 2100);
+                int prop = Random.Range(0, 3000);
                 if (prop == 1)
                     Instantiate(cool, spawnPosition, Quaternion.identity);
                 if (prop == 2)
                     Instantiate(bomb, spawnPosition, Quaternion.identity);
-                if (prop == 3)
+                if (prop == 3 || prop == 5)
                     Instantiate(food, spawnPosition, Quaternion.identity);
                 
                 if (bossNum == 0) return;
